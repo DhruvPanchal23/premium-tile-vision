@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,14 +20,20 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "Products", "Collections", "About Us", "Contact"].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase().replace(" ", "-")}`}
+              {[
+                { name: "Home", path: "/" },
+                { name: "Products", path: "/products" },
+                { name: "Collections", path: "/collections" },
+                { name: "About Us", path: "/about" },
+                { name: "Contact", path: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
                     className="text-primary-foreground/80 hover:text-accent transition-smooth"
                   >
-                    {link}
-                  </a>
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -44,12 +51,12 @@ export const Footer = () => {
                 "Outdoor Tiles",
               ].map((product) => (
                 <li key={product}>
-                  <a
-                    href="#products"
+                  <Link
+                    to="/products"
                     className="text-primary-foreground/80 hover:text-accent transition-smooth"
                   >
                     {product}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
