@@ -10,7 +10,7 @@ export const Hero = () => {
         <img
           src={heroImage}
           alt="Premium paver blocks and precast products showcase"
-          className="w-full h-full object-cover scale-105 animate-[scale_20s_ease-in-out_infinite]"
+          className="w-full h-full object-cover scale-105 animate-[scale_20s_ease-in-out_infinite] brightness-75"
         />
         <div className="absolute inset-0 gradient-hero" />
         
@@ -23,8 +23,8 @@ export const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
           {/* Enhanced Badge with Glow */}
-          <div className="inline-flex items-center gap-3 glass-card px-6 py-3 rounded-full text-primary-foreground shadow-glow group hover:shadow-premium transition-smooth">
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          <div className="inline-flex items-center gap-3 bg-accent/90 backdrop-blur-sm px-6 py-3 rounded-full text-accent-foreground shadow-glow group hover:shadow-premium transition-smooth border border-accent">
+            <div className="w-2 h-2 rounded-full bg-accent-foreground animate-pulse" />
             <span className="text-sm font-semibold tracking-wide">BIS Licensed Certified | Since 1982</span>
           </div>
 
@@ -62,9 +62,9 @@ export const Hero = () => {
               { value: "180+", label: "Clients" },
               { value: "BIS", label: "Certified" }
             ].map((stat, i) => (
-              <div key={i} className="glass-card px-6 py-3 rounded-xl hover:bg-white/30 transition-smooth">
+              <div key={i} className="bg-card/90 backdrop-blur-md px-6 py-3 rounded-xl hover:bg-card transition-smooth shadow-elegant border border-accent/20">
                 <div className="text-2xl md:text-3xl font-display font-bold text-accent">{stat.value}</div>
-                <div className="text-sm text-primary-foreground/80">{stat.label}</div>
+                <div className="text-sm text-foreground/80">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -72,8 +72,8 @@ export const Hero = () => {
 
         {/* Enhanced Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-primary-foreground rounded-full animate-pulse" />
+          <div className="w-6 h-10 rounded-full border-2 border-accent/70 flex items-start justify-center p-2 bg-card/20 backdrop-blur-sm">
+            <div className="w-1 h-2 bg-accent rounded-full animate-pulse" />
           </div>
         </div>
       </div>

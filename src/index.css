@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     /* Enhanced Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(25 25% 20% / 0.92), hsl(25 15% 15% / 0.88));
+    --gradient-hero: linear-gradient(135deg, hsl(25 25% 20% / 0.95), hsl(25 15% 15% / 0.90));
     --gradient-premium: linear-gradient(180deg, hsl(40 20% 97%), hsl(40 25% 95%));
     --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(40 15% 99%));
     --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);

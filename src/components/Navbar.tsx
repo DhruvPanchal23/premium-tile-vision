@@ -39,7 +39,7 @@ export const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? "bg-card/95 backdrop-blur-xl shadow-elegant border-b border-border/50"
-          : "bg-transparent"
+          : "bg-primary/40 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -49,7 +49,9 @@ export const Navbar = () => {
             <div className="w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center shadow-glow group-hover:scale-110 transition-smooth">
               <span className="text-xl font-display font-bold text-accent-foreground">AT</span>
             </div>
-            <h1 className="text-2xl md:text-3xl font-display font-bold text-primary group-hover:text-accent transition-smooth">
+            <h1 className={`text-2xl md:text-3xl font-display font-bold group-hover:text-accent transition-smooth ${
+              isScrolled ? "text-primary" : "text-primary-foreground"
+            }`}>
               Asian Tiles
             </h1>
           </Link>
@@ -60,8 +62,12 @@ export const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`relative px-4 py-2 text-foreground hover:text-accent transition-smooth font-medium group ${
-                  isActive(link.href) ? "text-accent" : ""
+                className={`relative px-4 py-2 hover:text-accent transition-smooth font-medium group ${
+                  isActive(link.href) 
+                    ? "text-accent" 
+                    : isScrolled 
+                    ? "text-foreground" 
+                    : "text-primary-foreground"
                 }`}
               >
                 {link.name}
@@ -84,7 +90,7 @@ export const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className={`md:hidden ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -93,8 +99,8 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden py-4 animate-fade-in bg-card/95 backdrop-blur-xl rounded-xl mt-2 shadow-premium">
+            <div className="flex flex-col space-y-4 px-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -107,7 +113,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               <Link to="/contact">
-                <Button variant="premium" size="lg" className="w-full">
+                <Button variant="premium" size="lg" className="w-full shadow-glow">
                   Get Quote
                 </Button>
               </Link>
