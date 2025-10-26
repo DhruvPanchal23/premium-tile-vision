@@ -44,33 +44,42 @@ export const ProcessFlow = () => {
           {steps.map((step, index) => (
             <div
               key={step.title}
-              className="relative bg-background rounded-xl p-8 shadow-elegant hover:shadow-premium transition-elegant group animate-fade-in-up"
+              className="relative bg-background rounded-2xl p-8 shadow-elegant hover:shadow-premium hover:-translate-y-2 transition-all duration-500 group animate-fade-in-up overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Step Number */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent flex items-center justify-center shadow-glow">
+              {/* Background Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-smooth" />
+              
+              {/* Step Number with Enhanced Design */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-2xl bg-gradient-accent flex items-center justify-center shadow-glow group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                 <span className="text-2xl font-display font-bold text-accent-foreground">
                   {step.step}
                 </span>
               </div>
 
-              {/* Icon */}
-              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-smooth">
-                <step.icon className="w-8 h-8 text-accent" />
+              {/* Icon with Glow Effect */}
+              <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center mb-6 group-hover:shadow-glow transition-all duration-300">
+                <step.icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform" />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-display font-bold text-foreground mb-3">
+              <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-accent transition-smooth relative z-10">
                 {step.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed relative z-10">
                 {step.description}
               </p>
 
-              {/* Connector Line (except last item) */}
+              {/* Enhanced Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-accent/30" />
+                <>
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-accent/30 to-transparent" />
+                  <div className="hidden lg:block absolute top-1/2 -right-3 w-2 h-2 rounded-full bg-accent/50" />
+                </>
               )}
+              
+              {/* Bottom Accent */}
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </div>
           ))}
         </div>

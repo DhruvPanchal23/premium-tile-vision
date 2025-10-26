@@ -48,26 +48,43 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="bg-card rounded-xl p-8 shadow-elegant hover:shadow-premium transition-elegant animate-fade-in-up"
+              className="relative bg-card rounded-2xl p-8 shadow-elegant hover:shadow-premium hover:-translate-y-2 transition-all duration-500 animate-fade-in-up overflow-hidden group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              {/* Quote Icon Background */}
+              <div className="absolute top-4 right-4 text-8xl text-accent/5 font-serif leading-none group-hover:text-accent/10 transition-smooth">"</div>
+              
+              {/* Rating with Animation */}
+              <div className="flex gap-1 mb-4 relative z-10">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star 
+                    key={i} 
+                    className="w-5 h-5 fill-accent text-accent group-hover:scale-110 transition-transform" 
+                    style={{ transitionDelay: `${i * 50}ms` }}
+                  />
                 ))}
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-foreground leading-relaxed mb-6 italic">
+              <p className="text-foreground leading-relaxed mb-6 italic relative z-10 text-sm">
                 "{testimonial.text}"
               </p>
 
-              {/* Author */}
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+              {/* Author with Enhanced Styling */}
+              <div className="border-t border-border/50 pt-4 relative z-10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gradient-accent flex items-center justify-center text-accent-foreground font-bold shadow-glow">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground group-hover:text-accent transition-smooth">{testimonial.name}</p>
+                    <p className="text-xs text-muted-foreground">{testimonial.location}</p>
+                  </div>
+                </div>
               </div>
+              
+              {/* Hover Accent */}
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
             </div>
           ))}
         </div>

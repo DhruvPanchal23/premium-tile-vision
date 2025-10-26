@@ -45,18 +45,27 @@ export const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="bg-card rounded-xl p-8 shadow-elegant hover:shadow-premium transition-elegant group animate-fade-in-up"
+              className="relative bg-card rounded-2xl p-8 shadow-elegant hover:shadow-premium hover:-translate-y-2 transition-all duration-500 group animate-fade-in-up overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-smooth">
-                <feature.icon className="w-8 h-8 text-accent" />
+              {/* Background Accent */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl group-hover:bg-accent/10 transition-smooth" />
+              
+              {/* Icon with Glow */}
+              <div className="relative w-16 h-16 rounded-2xl bg-gradient-accent flex items-center justify-center mb-6 shadow-glow group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <feature.icon className="w-8 h-8 text-accent-foreground" />
               </div>
-              <h3 className="text-xl font-display font-bold text-foreground mb-3">
+              
+              {/* Content */}
+              <h3 className="text-xl font-display font-bold text-foreground mb-3 group-hover:text-accent transition-smooth">
                 {feature.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
+              
+              {/* Bottom Accent Line */}
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </div>
           ))}
         </div>

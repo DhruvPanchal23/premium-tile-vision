@@ -36,41 +36,48 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-card/95 backdrop-blur-md shadow-elegant"
+          ? "bg-card/95 backdrop-blur-xl shadow-elegant border-b border-border/50"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <h1 className="text-2xl md:text-3xl font-display font-bold text-primary">
+          {/* Enhanced Logo */}
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center shadow-glow group-hover:scale-110 transition-smooth">
+              <span className="text-xl font-display font-bold text-accent-foreground">AT</span>
+            </div>
+            <h1 className="text-2xl md:text-3xl font-display font-bold text-primary group-hover:text-accent transition-smooth">
               Asian Tiles
             </h1>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation with Indicator */}
+          <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className={`text-foreground hover:text-accent transition-smooth font-medium ${
+                className={`relative px-4 py-2 text-foreground hover:text-accent transition-smooth font-medium group ${
                   isActive(link.href) ? "text-accent" : ""
                 }`}
               >
                 {link.name}
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-accent transform origin-left transition-transform duration-300 ${
+                  isActive(link.href) ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                }`} />
               </Link>
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* Enhanced CTA Button */}
           <div className="hidden md:block">
             <Link to="/contact">
-              <Button variant="premium" size="lg">
-                Get Quote
+              <Button variant="premium" size="lg" className="shadow-elegant hover:shadow-glow hover:-translate-y-0.5 transition-all duration-300 relative overflow-hidden group">
+                <span className="relative z-10">Get Quote</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
               </Button>
             </Link>
           </div>
