@@ -2,22 +2,32 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    location: "Mumbai",
+    name: "BSBK Group",
+    location: "Engineering Projects",
     rating: 5,
-    text: "Asian Tiles transformed our home with their beautiful marble collection. The quality is exceptional and the installation was seamless!",
+    text: "Their product quality and durability have consistently exceeded our expectations. Their commitment to timely delivery and customer support makes them a reliable partner in bringing our engineering projects to life.",
+    logo: true,
   },
   {
-    name: "Rajesh Kumar",
-    location: "Delhi",
+    name: "Mor Raipur",
+    location: "Urban Infrastructure",
     rating: 5,
-    text: "Best tile showroom in the city! The staff was knowledgeable and helped us find the perfect tiles within our budget.",
+    text: "Such high-quality, durable products and attention to detail have enhanced our infrastructure, bringing both aesthetics and longevity to our urban spaces.",
+    logo: true,
   },
   {
-    name: "Anjali Patel",
-    location: "Bangalore",
+    name: "Raheja Group",
+    location: "Real Estate Development",
     rating: 5,
-    text: "Their designer collection is absolutely stunning. We got so many compliments on our new bathroom tiles. Highly recommend!",
+    text: "With a keen eye for quality and design, this tiles and pavers supplier has become a go-to for our real estate projects. A solid partner we're pleased to work with.",
+    logo: true,
+  },
+  {
+    name: "Mosh Varaya",
+    location: "Development Projects",
+    rating: 5,
+    text: "Their timely deliveries and seamless coordination make project execution smoother, and their products elevate the overall look and feel of our developments.",
+    logo: true,
   },
 ];
 
@@ -27,14 +37,14 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            What Our <span className="text-accent">Clients Say</span>
+            Client <span className="text-accent">Experiences</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Don't just take our word for it - hear from our satisfied customers
+            Trusted by 180+ clients including government, real estate, and engineering sectors
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}

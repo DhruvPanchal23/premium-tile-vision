@@ -2,6 +2,8 @@ import { Layout } from "@/components/Layout";
 import { Hero } from "@/components/Hero";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Testimonials } from "@/components/Testimonials";
+import { ProcessFlow } from "@/components/ProcessFlow";
+import { About } from "@/components/About";
 import { ArrowRight, Sparkles, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -12,28 +14,40 @@ import designerCollectionImg from "@/assets/designer-collection.jpg";
 
 const featuredCategories = [
   {
-    title: "Floor Tiles",
-    description: "Premium ceramic and porcelain tiles",
+    title: "Paver Blocks",
+    description: "Durable concrete paver blocks for all applications",
     image: floorTilesImg,
-    link: "/products?category=floor",
+    link: "/products?category=paver",
   },
   {
-    title: "Wall Tiles",
-    description: "Designer wall tiles with patterns",
+    title: "Precast Products",
+    description: "High-quality precast concrete solutions",
     image: wallTilesImg,
-    link: "/products?category=wall",
+    link: "/products?category=precast",
   },
   {
-    title: "Marble & Granite",
-    description: "Luxurious natural stone",
+    title: "Contemporary Tiles",
+    description: "Modern tile designs for urban spaces",
     image: marbleGraniteImg,
-    link: "/products?category=marble",
+    link: "/products?category=contemporary",
   },
   {
-    title: "Designer Collections",
-    description: "Exclusive modern collections",
+    title: "Pyramid Design Tiles",
+    description: "Unique pyramid pattern tiles",
     image: designerCollectionImg,
-    link: "/collections",
+    link: "/products?category=pyramid",
+  },
+  {
+    title: "Windoor Products",
+    description: "Specialized window and door solutions",
+    image: floorTilesImg,
+    link: "/products?category=windoor",
+  },
+  {
+    title: "Outdoor Pavers",
+    description: "Weather-resistant outdoor paving solutions",
+    image: wallTilesImg,
+    link: "/products?category=outdoor",
   },
 ];
 
@@ -42,19 +56,21 @@ const Home = () => {
     <Layout>
       <Hero />
       
+      <About />
+      
       {/* Featured Categories */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-              Explore Our <span className="text-accent">Collections</span>
+              Unique Featured <span className="text-accent">Products</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Transform your space with our curated selection of premium tiles and stone products
+              Discover our diverse range of paver blocks, tiles, and precast products
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {featuredCategories.map((category, index) => (
               <Link
                 key={category.title}
@@ -89,6 +105,8 @@ const Home = () => {
         </div>
       </section>
 
+      <ProcessFlow />
+
       {/* Virtual Showroom CTA */}
       <section className="py-20 md:py-32 gradient-premium">
         <div className="container mx-auto px-4">
@@ -97,19 +115,19 @@ const Home = () => {
               <div className="p-12 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 text-accent font-semibold mb-4">
                   <Sparkles className="w-5 h-5" />
-                  <span>NEW FEATURE</span>
+                  <span>EXCLUSIVE SAVINGS AWAIT</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                  Virtual Showroom Experience
+                  Unlock Special Offers Today
                 </h2>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Explore our collections in an immersive 360° virtual environment. See how different tiles look in real room settings before making your decision.
+                  Explore our premium collections and discover exclusive savings on paver blocks, tiles, and precast products. Quality you can trust at prices you'll love.
                 </p>
                 <div>
                   <Link to="/collections">
                     <Button variant="premium" size="lg" className="group">
                       <Eye className="mr-2" />
-                      Explore Virtual Showroom
+                      View Collections
                       <ArrowRight className="ml-2 group-hover:translate-x-1 transition-smooth" />
                     </Button>
                   </Link>
@@ -118,7 +136,7 @@ const Home = () => {
               <div className="aspect-square lg:aspect-auto">
                 <img
                   src={marbleGraniteImg}
-                  alt="Virtual showroom"
+                  alt="Premium products showcase"
                   className="w-full h-full object-cover"
                 />
               </div>

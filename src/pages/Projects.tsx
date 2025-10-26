@@ -13,67 +13,75 @@ import heroTilesImg from "@/assets/hero-tiles.jpg";
 const projects = [
   {
     id: 1,
-    title: "Luxury Residential Villa",
-    category: "Residential",
-    location: "Mumbai, Maharashtra",
-    area: "5,000 sq.ft",
-    year: "2024",
+    title: "HP Government Infrastructure",
+    client: "HP (Himachal Pradesh Government)",
+    category: "Government",
+    location: "Himachal Pradesh",
+    area: "50,000 sq.ft",
+    year: "2023",
     image: heroTilesImg,
-    description: "Complete flooring and wall tiling for a premium residential villa with marble and designer tiles",
+    description: "Large-scale government infrastructure project with premium paver blocks and precast products",
   },
   {
     id: 2,
-    title: "Corporate Office Renovation",
+    title: "BSBK Engineering Complex",
+    client: "BSBK Group",
     category: "Commercial",
-    location: "Bangalore, Karnataka",
-    area: "12,000 sq.ft",
-    year: "2023",
+    location: "Multiple Locations",
+    area: "35,000 sq.ft",
+    year: "2024",
     image: designerCollectionImg,
-    description: "Modern office space transformation with contemporary tile solutions",
+    description: "Engineering projects featuring durable paver blocks and high-quality precast solutions",
   },
   {
     id: 3,
-    title: "Boutique Hotel Interiors",
-    category: "Hospitality",
-    location: "Goa",
-    area: "8,500 sq.ft",
+    title: "Raheja Real Estate Development",
+    client: "Raheja Group",
+    category: "Residential",
+    location: "Delhi NCR",
+    area: "80,000 sq.ft",
     year: "2023",
     image: marbleGraniteImg,
-    description: "Elegant hotel lobby and suite bathrooms featuring premium marble",
+    description: "Premium residential development with contemporary tiles and designer pavers",
   },
   {
     id: 4,
-    title: "Modern Family Home",
-    category: "Residential",
-    location: "Delhi NCR",
-    area: "3,500 sq.ft",
+    title: "Mosh Varaya Urban Spaces",
+    client: "Mosh Varaya",
+    category: "Commercial",
+    location: "Bangalore",
+    area: "45,000 sq.ft",
     year: "2024",
     image: wallTilesImg,
-    description: "Contemporary home design with artistic wall tiles and wooden floor tiles",
+    description: "Modern urban development featuring high-quality tiles and outdoor pavers",
   },
   {
     id: 5,
-    title: "Shopping Mall Flooring",
-    category: "Commercial",
-    location: "Pune, Maharashtra",
-    area: "25,000 sq.ft",
+    title: "Mor Raipur City Infrastructure",
+    client: "Mor Raipur",
+    category: "Government",
+    location: "Raipur, Chhattisgarh",
+    area: "60,000 sq.ft",
     year: "2023",
     image: floorTilesImg,
-    description: "High-traffic commercial flooring with durable porcelain tiles",
+    description: "Urban infrastructure enhancement with durable paver blocks and precast products",
   },
   {
     id: 6,
-    title: "Restaurant Interior Design",
-    category: "Hospitality",
+    title: "Commercial Plaza Development",
+    client: "Private Developer",
+    category: "Commercial",
     location: "Mumbai, Maharashtra",
-    area: "4,000 sq.ft",
+    area: "28,000 sq.ft",
     year: "2024",
     image: designerCollectionImg,
-    description: "Themed restaurant featuring custom designer tile patterns",
+    description: "High-traffic commercial plaza with premium quality paver blocks",
   },
 ];
 
-const categories = ["All", "Residential", "Commercial", "Hospitality"];
+const categories = ["All", "Government", "Commercial", "Residential"];
+
+
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -88,7 +96,7 @@ const Projects = () => {
         return Home;
       case "Commercial":
         return Building2;
-      case "Hospitality":
+      case "Government":
         return Hotel;
       default:
         return Building2;
@@ -105,8 +113,15 @@ const Projects = () => {
               Our <span className="text-accent">Projects</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Explore our portfolio of completed projects showcasing premium tile installations
+              Trusted by government, real estate leaders, and engineering giants
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-primary-foreground/80">
+              <span>• HP Government</span>
+              <span>• BSBK Group</span>
+              <span>• Raheja Group</span>
+              <span>• Mor Raipur</span>
+              <span>• Mosh Varaya</span>
+            </div>
           </div>
         </div>
       </section>
@@ -170,6 +185,8 @@ const Projects = () => {
                     <h3 className="text-xl font-display font-bold text-foreground mb-2">
                       {project.title}
                     </h3>
+                    
+                    <p className="text-sm text-accent font-semibold mb-2">{project.client}</p>
                     
                     <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                       {project.description}

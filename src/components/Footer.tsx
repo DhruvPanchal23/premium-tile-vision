@@ -11,9 +11,19 @@ export const Footer = () => {
           {/* About Column */}
           <div>
             <h3 className="text-2xl font-display font-bold mb-4">Asian Tiles</h3>
-            <p className="text-primary-foreground/80 leading-relaxed">
-              Transforming spaces with premium tiles and stone products since 1995. Quality, craftsmanship, and customer satisfaction are our priorities.
+            <p className="text-primary-foreground/80 leading-relaxed mb-4">
+              Most Trusted Paver Blocks & Precast Products Manufacturer since 1982. BIS Licensed Certified. Built to last and designed to inspire.
             </p>
+            <div className="flex gap-4 text-sm">
+              <div>
+                <p className="text-accent font-bold text-2xl">180+</p>
+                <p className="text-primary-foreground/70">Happy Clients</p>
+              </div>
+              <div>
+                <p className="text-accent font-bold text-2xl">40+</p>
+                <p className="text-primary-foreground/70">Years Experience</p>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -44,11 +54,12 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Our Products</h4>
             <ul className="space-y-2">
               {[
-                "Floor Tiles",
-                "Wall Tiles",
-                "Marble & Granite",
-                "Designer Collections",
-                "Outdoor Tiles",
+                "Paver Blocks",
+                "Precast Products",
+                "Contemporary Tiles",
+                "Pyramid Design",
+                "Windoor Products",
+                "Outdoor Pavers",
               ].map((product) => (
                 <li key={product}>
                   <Link

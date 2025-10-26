@@ -22,25 +22,44 @@ export const About = () => {
           {/* Content */}
           <div className="space-y-6 animate-slide-in">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
-              Crafting Beautiful Spaces Since{" "}
-              <span className="text-accent">1995</span>
+              We Help Transform Spaces with{" "}
+              <span className="text-accent">Exceptional Tiles and Pavers</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Asian Tiles has been transforming homes and commercial spaces with premium tiles and stone products for over two decades. Our commitment to quality, innovation, and customer satisfaction has made us a trusted name in the industry.
+              When it comes to choosing the right flooring for your home, Asian Tiles stands as your trusted partner since 1982. As a BIS Licensed Certified Manufacturer, we redefine quality and style in paver blocks, tiles, and precast products.
             </p>
+
+            <div className="bg-background rounded-xl p-6 border-l-4 border-accent">
+              <p className="text-foreground font-semibold mb-2">Our Mission</p>
+              <p className="text-muted-foreground leading-relaxed">
+                To provide everlasting quality products so that people experience innovation and value
+              </p>
+            </div>
 
             <div className="space-y-4">
               {[
-                "Exclusive designer collections from around the world",
-                "Expert consultation and installation services",
-                "Competitive pricing without compromising quality",
-                "Extensive showroom experience for hands-on selection",
+                "Serving Beyond Expectation since 1982",
+                "BIS Licensed Certified Manufacturer",
+                "Diverse Range of Designs",
+                "Affordable Luxury Without Compromising",
+                "Secure, Satisfaction Guaranteed",
               ].map((point, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0 mt-1" />
                   <p className="text-foreground">{point}</p>
                 </div>
               ))}
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 pt-4">
+              <div className="bg-background rounded-xl p-4 text-center">
+                <div className="text-3xl font-display font-bold text-accent mb-1">180+</div>
+                <div className="text-sm text-muted-foreground">Happy Clients</div>
+              </div>
+              <div className="bg-background rounded-xl p-4 text-center">
+                <div className="text-3xl font-display font-bold text-accent mb-1">40+</div>
+                <div className="text-sm text-muted-foreground">Years Experience</div>
+              </div>
             </div>
 
             <div className="pt-4">

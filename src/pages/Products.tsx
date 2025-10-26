@@ -14,81 +14,81 @@ import designerCollectionImg from "@/assets/designer-collection.jpg";
 const products = [
   {
     id: 1,
-    name: "Classic Wood Finish Floor Tile",
-    category: "Floor Tiles",
-    price: "₹45/sq.ft",
-    size: "600x600mm",
-    finish: "Matt",
+    name: "Classic Paver Blocks",
+    category: "Paver Blocks",
+    price: "₹35/sq.ft",
+    size: "200x100mm",
+    finish: "Natural",
     image: floorTilesImg,
   },
   {
     id: 2,
-    name: "Ornate Gold Pattern Wall Tile",
-    category: "Wall Tiles",
-    price: "₹65/sq.ft",
-    size: "300x600mm",
-    finish: "Glossy",
-    image: wallTilesImg,
-  },
-  {
-    id: 3,
-    name: "Premium White Marble",
-    category: "Marble & Granite",
-    price: "₹120/sq.ft",
-    size: "800x800mm",
-    finish: "Polished",
-    image: marbleGraniteImg,
-  },
-  {
-    id: 4,
-    name: "Designer Mix Collection",
-    category: "Designer Collections",
-    price: "₹85/sq.ft",
-    size: "Various",
-    finish: "Mixed",
-    image: designerCollectionImg,
-  },
-  {
-    id: 5,
-    name: "Elegant Floor Tile Series",
-    category: "Floor Tiles",
-    price: "₹52/sq.ft",
-    size: "600x600mm",
-    finish: "Satin",
-    image: floorTilesImg,
-  },
-  {
-    id: 6,
-    name: "Contemporary Wall Design",
-    category: "Wall Tiles",
-    price: "₹58/sq.ft",
-    size: "300x450mm",
+    name: "Interlocking Paver Series",
+    category: "Paver Blocks",
+    price: "₹42/sq.ft",
+    size: "200x100mm",
     finish: "Matt",
     image: wallTilesImg,
   },
   {
-    id: 7,
-    name: "Gray Granite Premium",
-    category: "Marble & Granite",
-    price: "₹95/sq.ft",
+    id: 3,
+    name: "Premium Precast Wall Panels",
+    category: "Precast Products",
+    price: "₹85/sq.ft",
+    size: "600x600mm",
+    finish: "Natural",
+    image: marbleGraniteImg,
+  },
+  {
+    id: 4,
+    name: "Contemporary Floor Tiles",
+    category: "Contemporary Tiles",
+    price: "₹58/sq.ft",
     size: "600x600mm",
     finish: "Polished",
+    image: designerCollectionImg,
+  },
+  {
+    id: 5,
+    name: "Pyramid Design Pavers",
+    category: "Pyramid Design",
+    price: "₹48/sq.ft",
+    size: "300x300mm",
+    finish: "Matt",
+    image: floorTilesImg,
+  },
+  {
+    id: 6,
+    name: "Windoor Precast Frames",
+    category: "Windoor Products",
+    price: "₹120/piece",
+    size: "Various",
+    finish: "Natural",
+    image: wallTilesImg,
+  },
+  {
+    id: 7,
+    name: "Heavy Duty Outdoor Pavers",
+    category: "Outdoor Pavers",
+    price: "₹52/sq.ft",
+    size: "300x300mm",
+    finish: "Natural",
     image: marbleGraniteImg,
   },
   {
     id: 8,
-    name: "Luxury Designer Set",
-    category: "Designer Collections",
-    price: "₹110/sq.ft",
-    size: "Various",
-    finish: "Premium",
+    name: "Designer Concrete Pavers",
+    category: "Paver Blocks",
+    price: "₹55/sq.ft",
+    size: "200x100mm",
+    finish: "Polished",
     image: designerCollectionImg,
   },
 ];
 
-const categories = ["All", "Floor Tiles", "Wall Tiles", "Marble & Granite", "Designer Collections"];
-const finishes = ["Matt", "Glossy", "Polished", "Satin"];
-const sizes = ["300x300mm", "300x450mm", "300x600mm", "600x600mm", "800x800mm"];
+const categories = ["All", "Paver Blocks", "Precast Products", "Contemporary Tiles", "Pyramid Design", "Windoor Products", "Outdoor Pavers"];
+const finishes = ["Matt", "Glossy", "Polished", "Satin", "Natural"];
+const sizes = ["200x100mm", "300x300mm", "300x600mm", "600x600mm", "800x800mm"];
 
 const Products = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -112,7 +112,7 @@ const Products = () => {
               Our <span className="text-accent">Product Catalog</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Discover premium tiles and stone products for every space
+              BIS Certified paver blocks, tiles, and precast products since 1982
             </p>
             
             {/* Search Bar */}
@@ -120,7 +120,7 @@ const Products = () => {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground w-5 h-5" />
               <Input
                 type="search"
-                placeholder="Search for tiles, marble, granite..."
+                placeholder="Search for paver blocks, tiles, precast products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 h-14 text-lg bg-card"

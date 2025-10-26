@@ -6,17 +6,45 @@ import marbleGraniteImg from "@/assets/marble-granite.jpg";
 import designerCollectionImg from "@/assets/designer-collection.jpg";
 
 const stats = [
-  { icon: Award, value: "25+", label: "Years Experience" },
-  { icon: Users, value: "10,000+", label: "Happy Customers" },
-  { icon: Building2, value: "500+", label: "Projects Completed" },
-  { icon: Globe, value: "50+", label: "Cities Served" },
+  { icon: Award, value: "40+", label: "Years Experience" },
+  { icon: Users, value: "180+", label: "Happy Clients" },
+  { icon: Building2, value: "1000+", label: "Projects Completed" },
+  { icon: Globe, value: "Pan-India", label: "Delivery Network" },
 ];
 
 const timeline = [
-  { year: "1995", title: "Foundation", desc: "Asian Tiles established in Mumbai" },
-  { year: "2005", title: "Expansion", desc: "Opened showrooms across major cities" },
-  { year: "2015", title: "Innovation", desc: "Launched exclusive designer collections" },
-  { year: "2024", title: "Digital Era", desc: "Virtual showroom and online experience" },
+  { year: "1982", title: "Foundation", desc: "Asian Tiles established as paver blocks manufacturer" },
+  { year: "1995", title: "BIS Certification", desc: "Received BIS Licensed Certification for quality assurance" },
+  { year: "2010", title: "Expansion", desc: "Launched comprehensive precast products line" },
+  { year: "2024", title: "Digital Era", desc: "180+ clients and growing with digital presence" },
+];
+
+const asianValues = [
+  {
+    letter: "A",
+    title: "Assured Quality",
+    description: "BIS Licensed Certified products that meet the highest industry standards",
+  },
+  {
+    letter: "S",
+    title: "Synergize",
+    description: "Collaborate with clients to deliver customized solutions",
+  },
+  {
+    letter: "I",
+    title: "Innovation",
+    description: "Continuously evolving designs and manufacturing processes",
+  },
+  {
+    letter: "A",
+    title: "Always Respect Others",
+    description: "Treating every stakeholder with dignity and professionalism",
+  },
+  {
+    letter: "N",
+    title: "Never Be Satisfied & Keep Learning",
+    description: "Committed to continuous improvement and excellence",
+  },
 ];
 
 const AboutPage = () => {
@@ -39,7 +67,7 @@ const AboutPage = () => {
               Our <span className="text-accent">Story</span>
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              25 years of excellence in transforming spaces with premium tiles and stone products
+              40+ years of excellence in paver blocks and precast products manufacturing
             </p>
           </div>
         </div>
@@ -67,6 +95,42 @@ const AboutPage = () => {
       </section>
 
       <About />
+
+      {/* ASIAN Values Section */}
+      <section className="py-20 md:py-32 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
+              Our <span className="text-accent">Values</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              The principles that guide everything we do at Asian Tiles
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {asianValues.map((value, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-xl p-8 shadow-elegant hover:shadow-premium transition-elegant group text-center animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-20 h-20 rounded-full bg-accent flex items-center justify-center mx-auto mb-6 shadow-glow">
+                  <span className="text-4xl font-display font-bold text-accent-foreground">
+                    {value.letter}
+                  </span>
+                </div>
+                <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Timeline Section */}
       <section className="py-20 md:py-32 bg-card">
@@ -110,15 +174,15 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="bg-card rounded-2xl p-12 shadow-elegant">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Vision</h2>
+              <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                To be India's most trusted and innovative tiles and stone products company, setting new standards in quality, design, and customer satisfaction. We envision spaces that inspire and endure.
+                To provide everlasting quality products so that people experience innovation and value. We are committed to delivering BIS certified paver blocks, tiles, and precast products that stand the test of time.
               </p>
             </div>
             <div className="bg-card rounded-2xl p-12 shadow-elegant">
-              <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Mission</h2>
+              <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Vision</h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                To deliver premium quality tiles and stone products that transform ordinary spaces into extraordinary experiences, while maintaining unwavering commitment to craftsmanship, innovation, and sustainability.
+                To be India's most trusted manufacturer of paver blocks and precast products, setting benchmarks in quality, durability, and design. We envision infrastructure that lasts generations while inspiring aesthetic excellence.
               </p>
             </div>
           </div>
@@ -138,19 +202,19 @@ const AboutPage = () => {
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl md:text-5xl font-display font-bold">
-                Craftsmanship Meets <span className="text-accent">Passion</span>
+                Craftsmanship Meets <span className="text-accent">Excellence</span>
               </h2>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Our team of experts brings decades of combined experience in sourcing, designing, and delivering the finest tiles and stone products. Every member shares our commitment to excellence.
+                Since 1982, our team has been dedicated to manufacturing BIS certified paver blocks and precast products. Every project reflects our commitment to quality, durability, and customer satisfaction.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div>
-                  <p className="text-4xl font-display font-bold text-accent mb-2">100+</p>
-                  <p className="text-primary-foreground/80">Expert Team Members</p>
+                  <p className="text-4xl font-display font-bold text-accent mb-2">BIS</p>
+                  <p className="text-primary-foreground/80">Licensed Certified</p>
                 </div>
                 <div>
-                  <p className="text-4xl font-display font-bold text-accent mb-2">24/7</p>
-                  <p className="text-primary-foreground/80">Customer Support</p>
+                  <p className="text-4xl font-display font-bold text-accent mb-2">180+</p>
+                  <p className="text-primary-foreground/80">Trusted Clients</p>
                 </div>
               </div>
             </div>

@@ -1,25 +1,30 @@
-import { Award, Users, Palette, Truck } from "lucide-react";
+import { Award, CheckCircle2, Palette, Shield, Clock } from "lucide-react";
 
 const features = [
   {
-    icon: Award,
-    title: "Premium Quality",
-    description: "Handpicked tiles and stones sourced from the finest manufacturers worldwide",
+    icon: Clock,
+    title: "Serving Beyond Expectation since 1982",
+    description: "40+ years of trust and excellence in paver blocks and precast products",
   },
   {
-    icon: Users,
-    title: "Expert Craftsmanship",
-    description: "Decades of experience in tile installation and stone work",
+    icon: Award,
+    title: "BIS Licensed Certified Manufacturer",
+    description: "Government certified quality assurance for all our products",
   },
   {
     icon: Palette,
-    title: "Custom Solutions",
-    description: "Tailored designs and patterns to match your unique vision",
+    title: "Diverse Range of Designs",
+    description: "Contemporary, pyramid, and custom designs for every aesthetic",
   },
   {
-    icon: Truck,
-    title: "Pan-India Delivery",
-    description: "Reliable shipping and logistics across the entire country",
+    icon: CheckCircle2,
+    title: "Affordable Luxury Without Compromising",
+    description: "Premium quality products at competitive prices",
+  },
+  {
+    icon: Shield,
+    title: "Secure, Satisfaction Guaranteed",
+    description: "Backed by our commitment to quality and customer satisfaction",
   },
 ];
 
@@ -36,7 +41,7 @@ export const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {features.map((feature, index) => (
             <div
               key={feature.title}
