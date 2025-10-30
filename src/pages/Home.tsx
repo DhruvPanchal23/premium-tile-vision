@@ -135,20 +135,20 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="p-12 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 text-accent font-semibold mb-4">
-                  <Sparkles className="w-5 h-5" />
-                  <span>EXCLUSIVE SAVINGS AWAIT</span>
+                  <Eye className="w-5 h-5" />
+                  <span>VIRTUAL SHOWROOM</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
-                  Unlock Special Offers Today
+                  Explore Our Showroom Virtually
                 </h2>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Explore our premium collections and discover exclusive savings on paver blocks, tiles, and precast products. Quality you can trust at prices you'll love.
+                  Experience our complete range of paver blocks, tiles, and precast products from the comfort of your home. Quality you can trust, innovation you can see.
                 </p>
                 <div>
-                  <Link to="/collections">
-                    <Button variant="premium" size="lg" className="group">
+                  <Link to="/products">
+                    <Button variant="default" size="lg" className="group">
                       <Eye className="mr-2" />
-                      View Collections
+                      View Products
                       <ArrowRight className="ml-2 group-hover:translate-x-1 transition-smooth" />
                     </Button>
                   </Link>
@@ -157,7 +157,7 @@ const Home = () => {
               <div className="aspect-square lg:aspect-auto">
                 <img
                   src={marbleGraniteImg}
-                  alt="Premium products showcase"
+                  alt="Asian Tiles virtual showroom - Premium paver blocks showcase"
                   className="w-full h-full object-cover"
                 />
               </div>

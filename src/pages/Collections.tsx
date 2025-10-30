@@ -65,7 +65,7 @@ const Collections = () => {
           <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
             <div className="inline-flex items-center gap-2 text-accent font-semibold mb-4 bg-card/20 backdrop-blur-sm px-4 py-2 rounded-full">
               <Sparkles className="w-5 h-5" />
-              <span>EXCLUSIVE COLLECTIONS</span>
+              <span>PREMIUM COLLECTIONS</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight">
               Designer <span className="text-accent">Collections</span>
@@ -177,23 +177,23 @@ const Collections = () => {
         </div>
       </section>
 
-      {/* Dream Budget Section */}
+      {/* Quality Range Section */}
       <section className="py-20 md:py-32 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-              Dream Designs for <span className="text-accent">Every Budget</span>
+              Quality Products for <span className="text-accent">Every Project</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              From affordable elegance to luxury exclusives, find the perfect collection for your project
+              From residential to commercial applications, find the perfect product range for your needs
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Essential", range: "₹35-65/sq.ft", desc: "Quality tiles for everyday spaces" },
-              { title: "Premium", range: "₹65-120/sq.ft", desc: "Designer tiles for refined taste" },
-              { title: "Luxury", range: "₹120+/sq.ft", desc: "Exclusive collections for statement spaces" },
+              { title: "Standard Range", desc: "Durable products for everyday applications" },
+              { title: "Premium Range", desc: "Enhanced designs for refined projects" },
+              { title: "Designer Range", desc: "Signature collections for exceptional spaces" },
             ].map((tier, index) => (
               <div
                 key={tier.title}
@@ -201,10 +201,9 @@ const Collections = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-2xl font-display font-bold text-foreground mb-2">{tier.title}</h3>
-                <p className="text-3xl font-bold text-accent mb-4">{tier.range}</p>
-                <p className="text-muted-foreground mb-6">{tier.desc}</p>
+                <p className="text-muted-foreground leading-relaxed">{tier.desc}</p>
                 <Link to="/products">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" size="lg" className="mt-6">
                     Explore Range
                   </Button>
                 </Link>

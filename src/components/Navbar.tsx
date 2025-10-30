@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import asianTilesLogo from "@/assets/asian-tiles-logo.png";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,6 +27,7 @@ export const Navbar = () => {
     { name: "Collections", href: "/collections" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
+    { name: "Downloads", href: "/downloads" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -44,16 +46,13 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          {/* Enhanced Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-accent flex items-center justify-center shadow-glow group-hover:scale-110 transition-smooth">
-              <span className="text-xl font-display font-bold text-accent-foreground">AT</span>
-            </div>
-            <h1 className={`text-2xl md:text-3xl font-display font-bold group-hover:text-accent transition-smooth ${
-              isScrolled ? "text-primary" : "text-primary-foreground"
-            }`}>
-              Asian Tiles
-            </h1>
+          {/* Logo */}
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={asianTilesLogo}
+              alt="Asian Tiles - Built to last and designed to inspire"
+              className="h-12 md:h-16 w-auto object-contain group-hover:scale-105 transition-smooth"
+            />
           </Link>
 
           {/* Desktop Navigation with Indicator */}

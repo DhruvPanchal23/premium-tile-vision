@@ -23,7 +23,7 @@ const categories = [
   },
   {
     title: "Designer Collections",
-    description: "Exclusive collections for unique and modern spaces",
+    description: "Premium collections for unique and modern spaces",
     image: designerCollectionImg,
   },
 ];

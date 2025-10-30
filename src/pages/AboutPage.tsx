@@ -22,26 +22,31 @@ const timeline = [
 const asianValues = [
   {
     letter: "A",
+    value: "Assured Quality",
     title: "Assured Quality",
     description: "BIS Licensed Certified products that meet the highest industry standards",
   },
   {
     letter: "S",
+    value: "Synergize",
     title: "Synergize",
     description: "Collaborate with clients to deliver customized solutions",
   },
   {
     letter: "I",
+    value: "Innovation",
     title: "Innovation",
     description: "Continuously evolving designs and manufacturing processes",
   },
   {
     letter: "A",
+    value: "Always Respect Others",
     title: "Always Respect Others",
     description: "Treating every stakeholder with dignity and professionalism",
   },
   {
     letter: "N",
+    value: "Never Be Satisfied & Keep Learning",
     title: "Never Be Satisfied & Keep Learning",
     description: "Committed to continuous improvement and excellence",
   },
@@ -96,38 +101,91 @@ const AboutPage = () => {
 
       <About />
 
-      {/* ASIAN Values Section */}
+      {/* Values Section */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-              Our <span className="text-accent">Values</span>
+              The ASIAN Values
             </h2>
-            <p className="text-lg text-muted-foreground">
-              The principles that guide everything we do at Asian Tiles
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our core principles that guide everything we do
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {asianValues.map((value, index) => (
               <div
                 key={index}
-                className="bg-card rounded-xl p-8 shadow-elegant hover:shadow-premium transition-elegant group text-center animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="bg-card rounded-2xl p-8 shadow-elegant hover:shadow-premium transition-smooth hover:-translate-y-1"
               >
-                <div className="w-20 h-20 rounded-full bg-accent flex items-center justify-center mx-auto mb-6 shadow-glow">
-                  <span className="text-4xl font-display font-bold text-accent-foreground">
-                    {value.letter}
-                  </span>
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <span className="text-2xl font-display font-bold text-primary">{value.letter}</span>
                 </div>
-                <h3 className="text-xl font-display font-bold text-foreground mb-3">
+                <h3 className="text-xl font-display font-bold text-foreground mb-2">
                   {value.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {value.description}
-                </p>
+                <p className="text-muted-foreground">{value.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="py-20 md:py-32 bg-muted">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
+              Our Leadership
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Meet the visionaries behind Asian Tiles' success
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {/* Founder */}
+            <div className="bg-card rounded-2xl shadow-premium overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-32 h-32 rounded-full bg-accent/20 border-4 border-accent mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-4xl font-display font-bold text-accent">F</span>
+                  </div>
+                  <p className="text-muted-foreground">Photo Coming Soon</p>
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-display font-bold text-foreground mb-2">
+                  Founder Name
+                </h3>
+                <p className="text-accent font-semibold mb-4">Founder & Chairman</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  With a vision to provide everlasting quality products, our founder established Asian Tiles in 1982. Over four decades of dedication to excellence have positioned the company as a trusted name in paver blocks and precast products manufacturing.
+                </p>
+              </div>
+            </div>
+
+            {/* Managing Director */}
+            <div className="bg-card rounded-2xl shadow-premium overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-32 h-32 rounded-full bg-accent/20 border-4 border-accent mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-4xl font-display font-bold text-accent">MD</span>
+                  </div>
+                  <p className="text-muted-foreground">Photo Coming Soon</p>
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-display font-bold text-foreground mb-2">
+                  Managing Director Name
+                </h3>
+                <p className="text-accent font-semibold mb-4">Managing Director</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Leading Asian Tiles with innovation and strategic vision, our Managing Director drives the company's growth while maintaining the highest standards of quality and customer satisfaction across all product lines.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

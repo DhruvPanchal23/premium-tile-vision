@@ -11,6 +11,9 @@ import AboutPage from "./pages/AboutPage";
 import Projects from "./pages/Projects";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
+import RoofTiles from "./pages/RoofTiles";
+import UDrain from "./pages/UDrain";
+import Downloads from "./pages/Downloads";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,9 @@ const App = () => (
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/roof-tiles" element={<RoofTiles />} />
+          <Route path="/u-drain" element={<UDrain />} />
+          <Route path="/downloads" element={<Downloads />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
