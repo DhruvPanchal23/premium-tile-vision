@@ -8,8 +8,8 @@ import designerCollectionImg from "@/assets/designer-collection.jpg";
 const stats = [
   { icon: Award, value: "40+", label: "Years Experience" },
   { icon: Users, value: "180+", label: "Happy Clients" },
-  { icon: Building2, value: "1000+", label: "Projects Completed" },
-  { icon: Globe, value: "Pan-India", label: "Delivery Network" },
+  { icon: Building2, value: "10K+", label: "Finished Tasks" },
+  { icon: Users, value: "20", label: "Team Members" },
 ];
 
 const timeline = [
@@ -60,7 +60,7 @@ const AboutPage = () => {
         <div className="absolute inset-0">
           <img
             src={marbleGraniteImg}
-            alt="About Asian Tiles"
+            alt="About Asian Tiles - Serving since 1982"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 gradient-hero" />
@@ -68,11 +68,14 @@ const AboutPage = () => {
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
+            <div className="inline-block bg-accent/90 backdrop-blur-sm px-6 py-2 rounded-full text-accent-foreground font-semibold mb-4">
+              Serving Since 1982
+            </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground leading-tight">
               Our <span className="text-accent">Story</span>
             </h1>
-            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto">
-              40+ years of excellence in paver blocks and precast products manufacturing
+            <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
+              Our journey began in 1982, inspired by the vision of our late beloved founder, Shri Ram Das Makhija. With passion and dedication, he established our tile and paver manufacturing company on the principles of quality, innovation, and integrity.
             </p>
           </div>
         </div>
@@ -150,18 +153,21 @@ const AboutPage = () => {
               <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-32 h-32 rounded-full bg-accent/20 border-4 border-accent mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-4xl font-display font-bold text-accent">F</span>
+                    <span className="text-4xl font-display font-bold text-accent">RM</span>
                   </div>
-                  <p className="text-muted-foreground">Photo Coming Soon</p>
+                  <p className="text-muted-foreground">In Loving Memory</p>
                 </div>
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-display font-bold text-foreground mb-2">
-                  Founder Name
+                  Shri Ram Das Makhija
                 </h3>
-                <p className="text-accent font-semibold mb-4">Founder & Chairman</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  With a vision to provide everlasting quality products, our founder established Asian Tiles in 1982. Over four decades of dedication to excellence have positioned the company as a trusted name in paver blocks and precast products manufacturing.
+                <p className="text-accent font-semibold mb-4">Founder (Late)</p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  With passion and dedication, he established our tile and paver manufacturing company in 1982 on the principles of quality, innovation, and integrity.
+                </p>
+                <p className="text-muted-foreground leading-relaxed italic">
+                  "His commitment to excellence continues to guide and inspires us even today. Though he is no longer with us, his legacy lives on in every product we create."
                 </p>
               </div>
             </div>
@@ -178,11 +184,17 @@ const AboutPage = () => {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-display font-bold text-foreground mb-2">
-                  Managing Director Name
+                  Managing Director
                 </h3>
-                <p className="text-accent font-semibold mb-4">Managing Director</p>
+                <p className="text-accent font-semibold mb-4">Managing Director&apos;s Desk</p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  We are committed to total customer satisfaction by identifying their specific needs, translating them into Quality products and providing dependable after-sales-services.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  This commitment is the corner stone of our Quality Policy and we strive to achieve it by putting into place a Quality System which adheres to the ISI Quality Standard.
+                </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Leading Asian Tiles with innovation and strategic vision, our Managing Director drives the company's growth while maintaining the highest standards of quality and customer satisfaction across all product lines.
+                  We plan to achieve this goal through our strength - the Employees; and seek their continuous involvement in achieving the Company&apos;s objectives. I therefore, seek continued patronage of our valued customers, cooperation of our employees and thank our well wishers who have contributed to the growth of the organization.
                 </p>
               </div>
             </div>
@@ -231,16 +243,25 @@ const AboutPage = () => {
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-card rounded-2xl p-12 shadow-elegant">
+            <div className="bg-card rounded-2xl p-12 shadow-elegant hover:shadow-premium transition-smooth">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <span className="text-3xl">🎯</span>
+              </div>
               <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Mission</h2>
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                To provide everlasting quality products so that people experience innovation and value. We are committed to delivering BIS certified paver blocks, tiles, and precast products that stand the test of time.
+              <p className="text-muted-foreground leading-relaxed text-lg mb-4">
+                The logo ASIAN means quality itself means that the company believes in providing quality products to the consumers and totally believes in consumer satisfaction.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-lg font-medium">
+                To provide everlasting quality products so that people experience innovation and value.
               </p>
             </div>
-            <div className="bg-card rounded-2xl p-12 shadow-elegant">
+            <div className="bg-card rounded-2xl p-12 shadow-elegant hover:shadow-premium transition-smooth">
+              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+                <span className="text-3xl">👁️</span>
+              </div>
               <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Vision</h2>
               <p className="text-muted-foreground leading-relaxed text-lg">
-                To be India's most trusted manufacturer of paver blocks and precast products, setting benchmarks in quality, durability, and design. We envision infrastructure that lasts generations while inspiring aesthetic excellence.
+                To be India&apos;s most trusted manufacturer of paver blocks and precast products, setting benchmarks in quality, durability, and design. We envision infrastructure that lasts generations while inspiring aesthetic excellence.
               </p>
             </div>
           </div>

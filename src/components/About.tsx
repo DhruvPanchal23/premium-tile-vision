@@ -21,12 +21,16 @@ export const About = () => {
 
           {/* Content */}
           <div className="space-y-6 animate-slide-in">
+            <div className="inline-block bg-accent/10 text-accent px-6 py-2 rounded-full font-semibold">
+              About Asian Tiles
+            </div>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
               We Help Transform Spaces with{" "}
               <span className="text-accent">Exceptional Tiles and Pavers</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              When it comes to choosing the right flooring for your home, Asian Tiles stands as your trusted partner since 1982. As a BIS Licensed Certified Manufacturer, we redefine quality and style in paver blocks, tiles, and precast products.
+              We believe that true quality is reflected in every detail, and style is what sets your space apart. 
+              Our tiles and pavers are crafted with precision, ensuring that both beauty and durability come together seamlessly.
             </p>
 
             <div className="bg-background rounded-xl p-6 border-l-4 border-accent">

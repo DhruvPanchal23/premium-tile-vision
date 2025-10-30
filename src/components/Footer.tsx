@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
@@ -14,6 +14,16 @@ export const Footer = () => {
             <p className="text-primary-foreground/80 leading-relaxed mb-4">
               Most Trusted Paver Blocks & Precast Products Manufacturer since 1982. BIS Licensed Certified. Built to last and designed to inspire.
             </p>
+            <div className="space-y-2 text-primary-foreground/80 mb-4">
+              <p className="flex items-center gap-2 text-sm">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+919893258000" className="hover:text-accent transition-smooth">+91 98932 58000</a>
+              </p>
+              <p className="flex items-center gap-2 text-sm">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+919755384111" className="hover:text-accent transition-smooth">+91 97553 84111</a>
+              </p>
+            </div>
             <div className="flex gap-4 text-sm">
               <div>
                 <p className="text-accent font-bold text-2xl">180+</p>
@@ -35,6 +45,7 @@ export const Footer = () => {
                 { name: "Products", path: "/products" },
                 { name: "Collections", path: "/collections" },
                 { name: "About Us", path: "/about" },
+                { name: "Downloads", path: "/downloads" },
                 { name: "Contact", path: "/contact" },
               ].map((link) => (
                 <li key={link.name}>

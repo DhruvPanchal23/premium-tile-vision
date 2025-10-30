@@ -40,6 +40,9 @@ export const Hero = () => {
           <p className="text-lg md:text-xl lg:text-2xl text-primary-foreground/90 max-w-2xl mx-auto font-medium">
             Most Trusted Paver Blocks & Precast Products Manufacturer
           </p>
+          <p className="text-base md:text-lg text-primary-foreground/80 max-w-2xl mx-auto">
+            We&apos;ve built our reputation on delivering exceptional quality, reliability, and unmatched service
+          </p>
           
           {/* CTA Buttons with Enhanced Styling */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
